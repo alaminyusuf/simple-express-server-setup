@@ -15,7 +15,7 @@ router.get('/:id', (req, res) => {
     res.json(searchedPost)
     res.status(200)
   }
-  res.status(400).send('There is no user with such ID')
+  res.status(400).json({ msg: 'There is no user with such ID' })
 })
 
 module.exports = router
